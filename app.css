@@ -1,0 +1,69 @@
+body{
+	background: #970A0A;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+.circle{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 7px solid gold;
+	background-color: white;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	background-color: #000;
+}
+.lightning{
+	height: 150px;
+	width: 46px;
+	margin-top: 22%;
+	margin-left: 30%;
+	-moz-transform: skew(-40deg);
+	-o-transform: skew(-40deg);
+	-ms-transform: skew(-40deg);
+	-webkit-transform: skew(-40deg);
+	transform: skew(-40deg);
+	background: #FCE606;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	animation: rayo-anim 3s infinite linear
+}
+
+.lightning:before, .lightning:after{
+	position: absolute;
+	content: "";
+}
+
+.lightning:before{
+	top: -100px;
+	left: -61px;
+	border-bottom: 146px solid #FCE606;
+	border-left: 62px solid transparent;
+	border-right: 0px solid transparent;
+}
+.lightning:after{
+	top: 115px;
+	left: 45px;
+	border-top: 146px solid #FCE606;
+	border-left: 0px solid transparent;
+	border-right: 62px solid transparent;
+}
+
+@keyframes rayo-anim{
+	0%{
+		opacity: 0.7;
+	}
+	50%{
+		opacity: 2;
+	}
+	100%{
+		opacity: 0.7;
+	}
+}
